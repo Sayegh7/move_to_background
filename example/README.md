@@ -1,16 +1,37 @@
-# move_to_background_example
+# move_to_background
 
-Demonstrates how to use the move_to_background plugin.
+Flutter plugin for sending android application to background. Note that currently only android is supported.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Install it (pubspec.yaml)
 
-A few resources to get you started if this is your first Flutter project:
+```yaml
+move_to_background: ^0.1.0
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Import it
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```dart
+import 'package:move_to_background/move_to_background.dart';
+```
+
+### Use it
+
+```dart
+MoveToBackground.moveTaskToBack();
+```
+
+## Useful Scenario
+
+Use with WillPopScope to send your application to the background when the user attempts to exit the app.
+
+```dart
+WillPopScope(
+  child: MaterialApp(...),
+  onWillPop: () async {
+    MoveToBackground.moveTaskToBack();
+    return false;
+  },
+);
+```
