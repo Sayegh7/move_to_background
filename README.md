@@ -7,7 +7,7 @@ Flutter plugin for sending android application to background. Note that currentl
 ### Install it (pubspec.yaml)
 
 ```yaml
-move_to_background: ^0.1.0
+move_to_background: ^0.1.2
 ```
 
 ### Import it
