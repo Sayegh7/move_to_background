@@ -1,6 +1,6 @@
 # move_to_background
 
-Flutter plugin for sending android application to background.
+Flutter plugin for sending android application to background. Note that currently only android is supported.
 
 ## Getting Started
 
