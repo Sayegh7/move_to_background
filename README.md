@@ -19,5 +19,5 @@ move_to_background: ^0.1.0
 ### Use it
 
 ```dart
-  await MoveToBackground.moveTaskToBack();
+  MoveToBackground.moveTaskToBack();
 ```
