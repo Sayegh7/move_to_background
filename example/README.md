@@ -1,37 +1,42 @@
-# move_to_background
-
-Flutter plugin for sending android application to background. Note that currently only android is supported.
-
-## Getting Started
-
-### Install it (pubspec.yaml)
-
-```yaml
-move_to_background: ^0.1.2
-```
-
-### Import it
+# Example App
 
 ```dart
+import 'package:flutter/material.dart';
+
 import 'package:move_to_background/move_to_background.dart';
-```
 
-### Use it
+void main() => runApp(MyApp());
 
-```dart
-MoveToBackground.moveTaskToBack();
-```
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
 
-## Useful Scenario
-
-Use with WillPopScope to send your application to the background when the user attempts to exit the app.
-
-```dart
-WillPopScope(
-  child: MaterialApp(...),
-  onWillPop: () async {
-    MoveToBackground.moveTaskToBack();
-    return false;
-  },
-);
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return WillPopScope(
+      onWillPop: () async {
+        MoveToBackground.moveTaskToBack();
+        return false;
+      },
+      child: MaterialApp(
+        home: Scaffold(
+          floatingActionButton: FloatingActionButton(
+            child: Icon(Icons.arrow_downward),
+            onPressed: () {
+              MoveToBackground.moveTaskToBack();
+            },
+          ),
+          appBar: AppBar(
+            title: const Text('MoveToBackground Example'),
+          ),
+          body: Center(
+            child: Text('Press the floating action button'),
+          ),
+        ),
+      ),
+    );
+  }
+}
 ```

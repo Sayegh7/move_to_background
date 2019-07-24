@@ -1,13 +1,13 @@
 # move_to_background
 
-Flutter plugin for sending android application to background. Note that currently only android is supported.
+Flutter plugin for sending mobile applications to background. Supports iOS and Android.
 
 ## Getting Started
 
 ### Install it (pubspec.yaml)
 
 ```yaml
-move_to_background: ^0.1.2
+move_to_background: ^0.2.0
 ```
 
 ### Import it
@@ -35,3 +35,7 @@ WillPopScope(
   },
 );
 ```
+
+## Note about using it for iOS
+
+Quitting your application or sending it to the background programmatically is a violation of the iOS [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/#//apple_ref/doc/uid/TP40006556-CH20-SW27), which usually doesn't bode well for getting through the review process. Keep that in mind.
