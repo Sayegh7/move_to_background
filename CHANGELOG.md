@@ -1,3 +1,7 @@
+## 1.0.0
+
+- Support the new Android plugins APIs.
+
 ## 0.2.0
 
 - Add iOS support.
