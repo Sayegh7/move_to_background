@@ -7,7 +7,7 @@ Flutter plugin for sending mobile applications to background. Supports iOS and A
 ### Install it (pubspec.yaml)
 
 ```yaml
-move_to_background: ^0.2.0
+move_to_background: <latest>
 ```
 
 ### Import it
