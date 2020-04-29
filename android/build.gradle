@@ -17,6 +17,9 @@ rootProject.allprojects {
         google()
         jcenter()
     }
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
 }
 
 apply plugin: 'com.android.library'

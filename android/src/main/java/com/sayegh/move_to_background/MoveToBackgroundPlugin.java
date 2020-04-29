@@ -30,6 +30,7 @@ public class MoveToBackgroundPlugin implements FlutterPlugin, MethodCallHandler,
   }
 
   @Override
+  @SuppressWarnings("deprecation")
   public void onAttachedToEngine(FlutterPluginBinding binding) {
     setupChannel(binding.getFlutterEngine().getDartExecutor(), binding.getApplicationContext());
   }
