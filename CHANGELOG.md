@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Supress deprecation warning for `getFlutterEngine`
+
 ## 1.0.0+1
 
 - Update README.
