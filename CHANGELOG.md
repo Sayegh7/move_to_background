@@ -1,3 +1,7 @@
+## 1.0.1-nullsafety.1
+
+- Enable null-safety
+
 ## 1.0.1
 
 - Supress deprecation warning for `getFlutterEngine`
