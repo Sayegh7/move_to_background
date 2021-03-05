@@ -1,4 +1,4 @@
-## 2.0.0
+## 1.0.1-nullsafety.1
 
 - Enable null-safety
 
