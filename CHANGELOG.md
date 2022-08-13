@@ -1,3 +1,8 @@
+## 2.0.0
+
+- Update minimal flutter version to 2.12
+- Update Android embedding to V2
+
 ## 1.0.2
 
 - null-safety release
