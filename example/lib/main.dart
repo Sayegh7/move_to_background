@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-
 import 'package:move_to_background/move_to_background.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
-  _MyAppState createState() => _MyAppState();
+  createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -20,7 +21,7 @@ class _MyAppState extends State<MyApp> {
       child: MaterialApp(
         home: Scaffold(
           floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.arrow_downward),
+            child: const Icon(Icons.arrow_downward),
             onPressed: () {
               MoveToBackground.moveTaskToBack();
             },
@@ -28,7 +29,7 @@ class _MyAppState extends State<MyApp> {
           appBar: AppBar(
             title: const Text('MoveToBackground Example'),
           ),
-          body: Center(
+          body: const Center(
             child: Text('Press the floating action button'),
           ),
         ),
