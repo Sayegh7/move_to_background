@@ -1,3 +1,8 @@
+## 2.0.0
+
+- Updated minimal flutter version to 2.5
+- Updated Adnroid embedding to V2
+
 ## 1.0.2
 
 - null-safety release

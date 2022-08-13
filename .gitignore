@@ -9,7 +9,6 @@
 .packages
 build/
 
-
 .flutter-plugins-dependencies
 flutter_export_environment.sh
 
@@ -97,4 +96,6 @@ lint/intermediates/
 lint/generated/
 lint/outputs/
 lint/tmp/
-# lint/reports/
+
+# Visual Studio Code related
+.vscode/
