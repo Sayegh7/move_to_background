@@ -10,7 +10,6 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 
@@ -20,19 +19,9 @@ public class MoveToBackgroundPlugin implements FlutterPlugin, MethodCallHandler,
   private MethodChannel channel;
   private static Activity activity;
 
-  /** Plugin registration. */
-  public static void registerWith(Registrar registrar) {
-    if (registrar.activity() != null) {
-      MoveToBackgroundPlugin.activity = registrar.activity();
-    }
-    MoveToBackgroundPlugin plugin = new MoveToBackgroundPlugin();
-    plugin.setupChannel(registrar.messenger(), registrar.context());
-  }
-
   @Override
-  @SuppressWarnings("deprecation")
   public void onAttachedToEngine(FlutterPluginBinding binding) {
-    setupChannel(binding.getFlutterEngine().getDartExecutor(), binding.getApplicationContext());
+    setupChannel(binding.getBinaryMessenger(), binding.getApplicationContext());
   }
 
   @Override
@@ -66,7 +55,6 @@ public class MoveToBackgroundPlugin implements FlutterPlugin, MethodCallHandler,
     }
   }
 
-
   @Override
   public void onAttachedToActivity(ActivityPluginBinding binding)
   {
@@ -87,5 +75,4 @@ public class MoveToBackgroundPlugin implements FlutterPlugin, MethodCallHandler,
   public void onDetachedFromActivity() {
     MoveToBackgroundPlugin.activity = null;
   }
-
 }
